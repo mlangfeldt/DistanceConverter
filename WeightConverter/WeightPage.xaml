@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DistanceConverter.WeightConverter.WeightPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid Padding="20,20">
+          <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="auto"/>  <!--will automatically adjust, column 0-->
+              <ColumnDefinition Width="10"/>    <!--column 1-->
+              <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>  
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>    <!--Row 0-->
+                <RowDefinition Height="20"/>    <!--Row 1-->
+                <RowDefinition Height="auto"/>    <!--Row 2-->
+                <RowDefinition Height="20"/>    <!--Row 3-->
+                <RowDefinition Height="auto"/>    <!--Row 4-->
+                <RowDefinition Height="20"/>    <!--Row 5-->
+                <RowDefinition Height="auto"/>    <!--Row 6-->
+                <RowDefinition Height="20"/>    <!--Row 7-->
+                <RowDefinition Height="auto"/>    <!--Row 8-->
+                <RowDefinition Height="20"/>    <!--Row 9-->
+                <RowDefinition Height="auto"/>    <!--Row 10-->
+                <RowDefinition Height="20"/>    <!--Row 11-->
+                <RowDefinition Height="auto"/>    <!--Row 12-->
+                <RowDefinition Height="60"/>    <!--Row 13-->
+                <RowDefinition Height="auto"/>    <!--Row 14-->
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Column="0" Grid.Row="0" Margin="0,7,0,0" Text="Kilograms" HorizontalTextAlignment="End"/>
+            <Entry Grid.Column="2" Grid.Row="0" x:Name="txtKilo" Keyboard="Numeric" TextChanged="TxtKilo_OnTextChanged" />
+            
+            <Label Grid.Column="0" Grid.Row="2" Margin="0,7,0,0" Text="Grams" HorizontalTextAlignment="End"/>
+            <Entry Grid.Column="2" Grid.Row="2" x:Name="txtGrams" Keyboard="Numeric" TextChanged="TxtGrams_OnTextChanged" />
+            
+            <Label Grid.Column="0" Grid.Row="4" Margin="0,7,0,0" Text="Ounces" HorizontalTextAlignment="End"/>
+            <Entry Grid.Column="2" Grid.Row="4" x:Name="txtOz" Keyboard="Numeric" TextChanged="TxtOz_OnTextChanged"/>
+            
+            <Label Grid.Column="0" Grid.Row="6" Margin="0,7,0,0" Text="Pounds" HorizontalTextAlignment="End"/>
+            <Entry Grid.Column="2" Grid.Row="6" x:Name="txtLbs" Keyboard="Numeric" TextChanged="TxtLbs_OnTextChanged"/>
+            
+            <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="14">
+                <Button Text="Clear" HorizontalOptions="FillAndExpand" Clicked="Clear_OnClicked"/>
+                <Button Text="Convert" HorizontalOptions="FillAndExpand" Clicked="Convert_OnClicked"/>
+            </StackLayout>
+        </Grid>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
