@@ -1,4 +1,6 @@
 ﻿using DistanceConverter.Views;
+using DistanceConverter.WeightConverter;
+
 namespace DistanceConverter;
 
 public partial class App : Application
@@ -7,6 +9,24 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new NavigationPage(new DistancePage());
+        var tabbedPage = new TabbedPage
+        {
+            Title = "Conversion"
+        };
+
+        var distancePage = new NavigationPage(new DistancePage())
+        {
+            Title = "Distance"
+        };
+
+        var weightPge = new NavigationPage(new WeightPage())
+        {
+            Title = "Weight"
+        };
+        
+        tabbedPage.Children.Add(distancePage);
+        tabbedPage.Children.Add(weightPge);
+
+        MainPage = tabbedPage;
     }
 }
