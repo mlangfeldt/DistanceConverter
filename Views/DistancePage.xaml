@@ -31,33 +31,30 @@
             </Grid.RowDefinitions>
             
             <Label Grid.Column="0" Grid.Row="0" Margin="0,7,0,0" Text="Meters" HorizontalTextAlignment="End"/>
-            <Entry Grid.Column="2" Grid.Row="0" x:Name="txtMeters"/>
+            <Entry Grid.Column="2" Grid.Row="0" x:Name="txtMeters" Keyboard="Numeric" TextChanged="TxtMeters_OnTextChanged"/>
             
             <Label Grid.Column="0" Grid.Row="2" Margin="0,7,0,0" Text="Inches" HorizontalTextAlignment="End"/>
-            <Entry Grid.Column="2" Grid.Row="2" x:Name="txtInches"/>
+            <Entry Grid.Column="2" Grid.Row="2" x:Name="txtInches" Keyboard="Numeric" TextChanged="TxtInches_OnTextChanged"/>
             
             <Label Grid.Column="0" Grid.Row="4" Margin="0,7,0,0" Text="Feet" HorizontalTextAlignment="End"/>
-            <Entry Grid.Column="2" Grid.Row="4" x:Name="txtFeet"/>
+            <Entry Grid.Column="2" Grid.Row="4" x:Name="txtFeet" Keyboard="Numeric" TextChanged="TxtFeet_OnTextChanged"/>
             
             <Label Grid.Column="0" Grid.Row="6" Margin="0,7,0,0" Text="Yards" HorizontalTextAlignment="End"/>
-            <Entry Grid.Column="2" Grid.Row="6" x:Name="txtYards"/>
+            <Entry Grid.Column="2" Grid.Row="6" x:Name="txtYards" Keyboard="Numeric" TextChanged="TxtYards_OnTextChanged"/>
             
             <Label Grid.Column="0" Grid.Row="8" Margin="0,7,0,0" Text="Miles" HorizontalTextAlignment="End"/>
-            <Entry Grid.Column="2" Grid.Row="8" x:Name="txtMiles"/>
+            <Entry Grid.Column="2" Grid.Row="8" x:Name="txtMiles" Keyboard="Numeric" TextChanged="TxtMiles_OnTextChanged"/>
             
             <Label Grid.Column="0" Grid.Row="10" Margin="0,7,0,0" Text="Nautical" HorizontalTextAlignment="End"/>
-            <Entry Grid.Column="2" Grid.Row="10" x:Name="txtNautical"/>
+            <Entry Grid.Column="2" Grid.Row="10" x:Name="txtNautical" Keyboard="Numeric" TextChanged="TxtNautical_OnTextChanged"/>
             
             <Label Grid.Column="0" Grid.Row="12" Margin="0,7,0,0" Text="Kilometers" HorizontalTextAlignment="End"/>
-            <Entry Grid.Column="2" Grid.Row="12" x:Name="txtKilometers"/>
+            <Entry Grid.Column="2" Grid.Row="12" x:Name="txtKilometers" Keyboard="Numeric" TextChanged="TxtKilometers_OnTextChanged"/>
             
             <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="14">
-                <Button Text="Clear" HorizontalOptions="FillAndExpand"/>
-                <Button Text="Convert" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Clear" HorizontalOptions="FillAndExpand" Clicked="Clear_OnClicked"/>
+                <Button Text="Convert" HorizontalOptions="FillAndExpand" Clicked="Convert_OnClicked"/>
             </StackLayout>
-            
-            
-            
         </Grid>
             </ScrollView>
     </ContentPage.Content>
